@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="ISO-8859-15"?>
+<uc-export clientvers="21.0.4+hf.1.build.38">
+<JOBI name="BBC.SNIPPETS.JOBI.UNIX.ZIP.LIST_CONTENT_WITH_PATTERN">
+<HEADER state="1">
+<Title>running unzip -l on Unix</Title>
+<ArchiveKey1/>
+<ArchiveKey2/>
+<OH_SubType/>
+</HEADER>
+<SCRIPT mode="1" state="1">
+<MSCRI><![CDATA[! ==========================================================
+!
+!   Include: run cmd on linux to list the contant of a
+!   zip file.
+!
+!   the files included in the zip file are shown in the
+!   job output (AE report type REP)
+!
+!   # input vraiables +
+!   + ================ + ====================================
+!   + &BBC_ZIP_PATH#   +  path where the zip file is located
+!   + &BBC_ZIP_FILE#   +  name of the zip file
+!   + &BBC_PATTERN#    +  Pattern used by grep
+!
+!
+!
+!   # output variables
+!   + ================ + ====================================
+!
+! ==========================================================
+cd &BBC_ZIP_PATH#
+unzip -l &BBC_ZIP_FILE# | grep &BBC_PATTERN#]]></MSCRI>
+</SCRIPT>
+<DOCU_Docu state="1" type="text">
+<DOC/>
+</DOCU_Docu>
+</JOBI>
+</uc-export>
